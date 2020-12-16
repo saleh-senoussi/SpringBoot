@@ -1,0 +1,28 @@
+1607452390812	Rename resource 'homepage-static.html'
+1607452876206	Rename package 'com.example.demo'
+1607455009973	Delete element
+1607472659554	Rename package 'com.example.demo'
+1607482439778	Move compilation units
+1607482475946	Move compilation unit
+1607482490801	Move compilation unit
+1607482524165	Move compilation unit
+1607482575095	Rename package 'config'
+1607482588100	Copy package
+1607482609398	Delete element
+1607482618283	Copy package
+1607482640364	Delete element
+1607482664642	Move compilation unit
+1607482672115	Delete element
+1607482703254	Move compilation unit
+1607482709497	Move compilation unit
+1607482716206	Move compilation unit
+1607482724966	Move compilation units
+1607482731936	Delete elements
+1607482755996	Move compilation unit
+1607482811320	Move compilation unit
+1607482828518	Move compilation unit
+1607482859236	Move compilation units
+1607482894671	Move compilation unit
+1607486170822	Extract local variable 'response'
+1607486216089	Extract local variable 'jsonObject'
+1607486526465	Extract local variable 'watchlistItems'

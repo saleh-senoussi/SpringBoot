@@ -1,0 +1,5 @@
+package com.openclassrooms.watchlist;
+
+public @interface Rating {
+
+}

@@ -1,0 +1,57 @@
+package com.openclassrooms.watchlist;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+//import java.util.List;
+
+import org.assertj.core.util.Arrays;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import com.openclassrooms.watchlist.domain.WatchlistItem;
+import com.openclassrooms.watchlist.repository.WatchlistRepository;
+import com.openclassrooms.watchlist.service.MovieRatingService;
+import com.openclassrooms.watchlist.service.WatchlistService;
+
+@RunWith(MockitoJUnitRunner.class)
+public class WatchlistServiceTest {
+	
+	@Mock
+	private WatchlistRepository watchlistRepositoryMock;
+	
+	@Mock
+	private MovieRatingService movieRatingServiceMock; 
+	
+	@InjectMocks
+	private WatchlistService watchlistService;
+	
+	@Test
+	public void getWatchlistItemsReturnsAllItemsFromRepository() {
+		
+		//Arrange
+		WatchlistItem item1 = new WatchlistItem("Star Wars", "7.7", "M", "", 1);
+		WatchlistItem item2 = new WatchlistItem("Star Treck", "8.7", "M", "", 1);
+		List<WatchlistItem> mockItems = new ArrayList<WatchlistItem>(2);
+		mockItems.add(0, item1);
+		mockItems.add(1, item2);
+		
+		Mockito.when(watchlistRepositoryMock.getList()).thenReturn(mockItems);
+		
+		//Act
+		List<WatchlistItem> result = watchlistService.getWatchlistItems();
+		
+		//Assert
+		Assert.assertTrue(result.size()==2);
+		Assert.assertTrue(result.get(0).getTitle().equals("Star Wars"));
+		Assert.assertTrue(result.get(0).getTitle().equals("Star Treck"));
+		
+	}
+
+}

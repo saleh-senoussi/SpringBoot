@@ -1,0 +1,11 @@
+package com.openclassrooms.watchlist;
+
+import javax.validation.Payload;
+
+public @interface Rating {
+	
+	String message() default "Please enter a value that is between 5.0 and 10.0";
+	Class<?>[] groups() default {};
+    Class<? extends Payload>[] payload() default {};
+
+}
